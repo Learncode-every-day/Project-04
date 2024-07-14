@@ -596,6 +596,7 @@ a {
     margin-top: 70px;
     display: grid;
     grid-template-columns: auto 1fr auto;
+    column-gap: 54px;
 }
 
 .service-item {
@@ -639,4 +640,42 @@ a {
 .service-item__more::after {
     content: url(../icon/arrow-up-right.svg);
     margin: 1px 0 0 4px;
+}
+
+.service__media {
+    position: relative;
+    margin-top: 18px;
+}
+
+.service__media::after {
+    position: absolute;
+    content: "";
+    height: 350px;
+    left: 16px;
+    right: 16px;
+    bottom: 0;
+    border-radius: 10px;
+    background: linear-gradient(180deg, #9df1fb 0%, #73d0db 108.14%);
+}
+
+.service__img {
+    display: block;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+}
+
+.service__cta-wrap {
+    margin-top: 45px;
+    display: flex;
+    justify-content: center;
+}
+
+.service__cta {
+    min-width: 214px;
+    border-radius: 31px;
+    border: 1px solid currentColor;
+    opacity: 0.6;
+    box-shadow: 0px 13px 26px -8px rgba(255, 91, 46, 0.42);
+    color: #ff5b2e;
 }
