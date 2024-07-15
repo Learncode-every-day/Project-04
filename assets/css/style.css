@@ -725,20 +725,28 @@ a {
     width: 100%;
     bottom: 0;
     left: 0;
-    height: 266px;
+    /* Tối ưu hóa */
+    height: 94%;
     border-radius: inherit;
     background: linear-gradient(180deg, #90ccff 0%, #59a8eb 95.96%);
 }
 
 .staff-item__img-wrap::after {
     position: absolute;
+    content: "";
     left: 50%;
+    width: calc(100% + 36px);
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    /* Ứng với chiều rộng */
+    background-size: 100%;
     bottom: 0;
     transform: translateX(-50%);
 }
 
 .staff-item:nth-child(1) .staff-item__img-wrap::after {
-    content: url(../icon/staff-decor-1.svg);
+    background-image: url(../icon/staff-decor-1.svg);
 }
 
 .staff-item:nth-child(2) .staff-item__img-wrap::before {
@@ -746,7 +754,7 @@ a {
 }
 
 .staff-item:nth-child(2) .staff-item__img-wrap::after {
-    content: url(../icon/staff-decor-2.svg);
+    background-image: url(../icon/staff-decor-2.svg);
 }
 
 .staff-item:nth-child(3) .staff-item__img-wrap::before {
@@ -754,7 +762,7 @@ a {
 }
 
 .staff-item:nth-child(3) .staff-item__img-wrap::after {
-    content: url(../icon/staff-decor-3.svg);
+    background-image: url(../icon/staff-decor-3.svg);
 }
 
 .staff-item:nth-child(4) .staff-item__img-wrap::before {
@@ -762,12 +770,12 @@ a {
 }
 
 .staff-item:nth-child(4) .staff-item__img-wrap::after {
-    content: url(../icon/staff-decor-4.svg);
+    background-image: url(../icon/staff-decor-4.svg);
 }
 
 .staff-item:nth-child(even) .staff-item__img-wrap::after {
-    top: 16px;
-    bottom: initial;
+    background-position: 0 16px;
+    /* Chiều x = 0; y = 16px */
 }
 
 .staff-item__img {
