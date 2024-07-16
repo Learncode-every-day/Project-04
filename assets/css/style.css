@@ -982,7 +982,7 @@ a {
 
 /* ===== Review ===== */
 .review {
-    padding: 53px 0;
+    padding: 104px 0 53px;
 }
 
 .review__inner {
@@ -1006,6 +1006,14 @@ a {
     transition: color 0.5s, border-color 0.5s, background-color 0.5s;
 }
 
+.review__control:nth-of-type(2) {
+    margin-left: auto;
+}
+
+.review__list {
+    display: flex;
+}
+
 .review__control:hover {
     cursor: pointer;
     color: #fff;
@@ -1017,6 +1025,9 @@ a {
     display: flex;
     align-items: center;
     column-gap: 115px;
+    /* Bằng width của thẻ cha */
+    width: 100%;
+    flex-shrink: 0;
 }
 
 .review-item__media {
@@ -1027,6 +1038,10 @@ a {
     border-radius: 137px;
 }
 
+.review__content {
+    overflow: hidden;
+}
+
 .review-item__media::before {
     content: "";
     position: absolute;
@@ -1034,6 +1049,10 @@ a {
     height: 82%;
     background: #ffda54;
     border-radius: inherit;
+}
+
+.review-item__content {
+    margin-top: 28px;
 }
 
 .review-item__img {
