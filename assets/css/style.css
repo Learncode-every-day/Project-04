@@ -914,6 +914,12 @@ a {
     border-radius: 20px;
 }
 
+.pricing-item--active {
+    border-radius: 20px;
+    background: #fff;
+    box-shadow: 0px 20px 44px 0px rgba(195, 108, 22, 0.06);
+}
+
 .pricing-item__type {
     color: #ff5b2e;
     font-size: 1.2rem;
@@ -972,4 +978,51 @@ a {
 .pricing-item__item::before {
     margin-right: 14px;
     content: url(../icon/pricing-check.svg);
+}
+
+/* ===== Review ===== */
+.review {
+    padding: 53px 0;
+}
+
+.review__inner {
+    display: flex;
+    align-items: center;
+    column-gap: 44px;
+}
+
+.review__control {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Loại bỏ sự co lại */
+    flex-shrink: 0;
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    color: #ff5b2e;
+    background: transparent;
+    border: 1.5px solid #ffd1c4;
+    transition: color 0.5s, border-color 0.5s, background-color 0.5s;
+}
+
+.review__control:hover {
+    cursor: pointer;
+    color: #fff;
+    border: #ff5b2e;
+    background: #ff5b2e;
+}
+
+.review-item {
+    display: flex;
+    align-items: center;
+}
+
+.review-item__media {
+    flex-shrink: 0;
+    width: 274px;
+}
+
+.review-item__img {
+    width: 100%;
 }
